@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/helloworld121/redux-example/issues"
   },
-  "homepage": "https://github.com/helloworld121/redux-example#readme"
+  "homepage": "https://github.com/helloworld121/redux-example#readme",
+  "dependencies": {
+    "redux": "^4.0.5"
+  }
 }
