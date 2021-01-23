@@ -16,7 +16,20 @@ const createStore = redux.createStore;
 // to init the state with the default value
 //   => we pass it using js (ES6) syntax to init state with a default value
 const rootReducer = (state = initialState, action) => {
-    // this reducer just returns the old state
+    // Attention STATE MUST be immutable
+
+    if(action.type === 'INCREMENT_COUNTER') {
+        return {
+            ...state,
+            counter: state.counter + 1
+        }
+    } else if(action.type === 'ADD_COUNTER') {
+        return {
+            ...state,
+            counter: state.counter + action.value
+        }
+    }
+
     return state;
 }
 
