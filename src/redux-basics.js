@@ -43,6 +43,16 @@ const store = createStore(rootReducer);
 console.log(store.getState());
 
 
+
+// Subscription
+// we want to get notified if something changed
+// => a subscription gets triggered as soon as the state updates
+store.subscribe(() => {
+    console.log('[Subscription]', store.getState());
+})
+
+
+
 // Dispatching Action
 // dispatching an action requires an argument containing an object with the parameter 'type'
 //   => 'type' identifies the action that will be executed
@@ -54,4 +64,3 @@ store.dispatch({type: 'ADD_COUNTER', value:10 });
 
 console.log(store.getState());
 
-// Subscription
